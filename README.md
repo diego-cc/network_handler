@@ -1,10 +1,11 @@
 # network_handler
 Notifies your app whenever your device's network connection status changes. It exposes a callback for you to handle those changes.
 
-![Example](https://files.catbox.moe/7wsc7z.mp4 "Example")
+[![Example](https://user-images.githubusercontent.com/50987412/113434801-31c23500-9414-11eb-9054-c60bc1c03408.png)](https://user-images.githubusercontent.com/50987412/113434067-e8251a80-9412-11eb-91a8-3ee18cff67e7.mp4 "Example")
 
 ## Usage
 ```
+// ...
 import 'package:network_handler/network_handler.dart';
 import 'package:network_handler/network_status.dart';
 
