@@ -16,7 +16,7 @@ class SomeWidget extends StatefulWidget {
 
 class _SomeWidgetState extends State<SomeWidget> {
     @override
-    build(BuildContext context) {
+    Widget build(BuildContext context) {
         return NetworkHandler(
             onChanged: (NetworkStatus status) {
                 // Handle network status changes here
@@ -31,7 +31,7 @@ class _SomeWidgetState extends State<SomeWidget> {
                 }
             },
             child: WrappedWidget()
-        )
+        );
     }
 }
 ```
