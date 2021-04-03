@@ -1,3 +1,5 @@
+[![pub points](https://badges.bar/network_handler/pub%20points)](https://pub.dev/packages/network_handler/score)
+
 # network_handler
 Notifies your app whenever your device's network connection status changes. It exposes a callback for you to handle those changes.
 
