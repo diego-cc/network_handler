@@ -6,7 +6,7 @@ import 'package:network_handler/network_handler.dart';
 import 'package:network_handler/network_status.dart';
 
 class Example extends StatefulWidget {
-  Example({Key key}) : super(key: key);
+  Example({Key? key}) : super(key: key);
 
   @override
   _ExampleState createState() => _ExampleState();
@@ -59,7 +59,7 @@ class _ExampleState extends State<Example> {
 class ExampleChild extends StatelessWidget {
   final NetworkStatus status;
 
-  const ExampleChild({Key key, @required this.status}) : super(key: key);
+  const ExampleChild({Key? key, required this.status}) : super(key: key);
 
   TextSpan get _statusText {
     TextStyle textStyle = TextStyle(fontSize: 18, color: Colors.yellow[700]);

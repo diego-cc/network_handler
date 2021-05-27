@@ -35,7 +35,10 @@ class NetworkHandler extends StatefulWidget {
   final int refreshTimer;
 
   NetworkHandler(
-      {Key key, @required this.child, this.refreshTimer = 2000, this.onChanged})
+      {Key? key,
+      required this.child,
+      this.refreshTimer = 2000,
+      required this.onChanged})
       : super(key: key);
 
   @override
@@ -43,20 +46,20 @@ class NetworkHandler extends StatefulWidget {
 }
 
 class _NetworkHandlerState extends State<NetworkHandler> {
-  Isolate _isolate;
-  ReceivePort _receivePort;
+  Isolate? _isolate;
+  late ReceivePort _receivePort;
 
-  NetworkStatus _status = NetworkStatus.unknown;
+  NetworkStatus? _status = NetworkStatus.unknown;
 
-  static int _refreshTimer;
-  static Timer _networkTimer;
+  static int? _refreshTimer;
+  static Timer? _networkTimer;
 
   /// Pings [defaultHost] once.
   ///
   /// It is assumed that [defaultHost] has zero downtime
   /// (an unrealistic expectation),
   /// so choose it wisely.
-  static FutureOr<NetworkStatus> _checkStatus({SendPort sendPort}) {
+  static FutureOr<NetworkStatus> _checkStatus({SendPort? sendPort}) {
     return Socket.connect(defaultHost, defaultPort,
             timeout: const Duration(seconds: defaultTimeoutSeconds))
         .then((socket) {
